@@ -14,3 +14,8 @@ npm run serve
 ```
 npm run build
 ```
+
+### App running in live @
+```
+https://pokedex-d0c74.firebaseapp.com/
+```

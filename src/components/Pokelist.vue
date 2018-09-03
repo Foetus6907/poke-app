@@ -3,14 +3,14 @@
   <ul class="list-group">
     <li class="list-group-item container card" :key="key" v-for="(pokemon,key) in list">
       <div class="row" style="display: flex ">
-        <div class="col-xs-2" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
-          <span class="badge badge-primary">{{ pokemon.id }}</span>
+        <div class="col-xs-2 col-md-2 co-lg-2" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
+          <span class="badge badge-primary" style="width:25%;">{{ pokemon.id }}</span>
         </div>
-        <div class="col-xs-2" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
+        <div class="col-xs-2 col-md-3 co-lg-3" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
         <img class="card-img-top" :src="pokemon.sprites.front_default" alt="Card image cap">
         </div>
-        <div class="card-body col-xs-8 row">
-          <div class="col-xs-5">
+        <div class="card-body col-xs-8 row" style="display:  flex;justify-content:  center;align-items:  center;">
+          <div class="col-xs-5 col-md-6 co-lg-6">
             <h5 class="card-title">{{ pokemon.name }}</h5>
             <label id="label1">{{pokemon.version_group.name}}</label>    
             <br/>

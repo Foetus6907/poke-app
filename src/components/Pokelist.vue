@@ -1,20 +1,30 @@
 <template>
-  <div>
-    <ul class="list-group">
-      <li class="list-group-item" :key="key" v-for="(pokemon,key) in list">
-        <div class="card" style="width: 100%;">
-          
-          <div class="card-body">
-            <span class="badge badge-pill badge-primary">{{pokemon.id}}</span><img class="card-img-left" :src="pokemon.sprites.front_default" alt="Card image cap">
-          <h5 class="card-title">{{pokemon.name}}</h5>
-          <p class="card-text">Version : {{pokemon.version_group.name}}</p>
-          <a href="#" class="btn btn-primary">Detail</a>
+<div>
+  <ul class="list-group">
+    <li class="list-group-item container card" :key="key" v-for="(pokemon,key) in list">
+      <div class="row" style="display: flex ">
+        <div class="col-xs-2" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
+          <span class="badge badge-primary">{{ pokemon.id }}</span>
+        </div>
+        <div class="col-xs-2" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
+        <img class="card-img-top" :src="pokemon.sprites.front_default" alt="Card image cap">
+        </div>
+        <div class="card-body col-xs-8 row">
+          <div class="col-xs-5">
+            <h5 class="card-title">{{ pokemon.name }}</h5>
+            <label id="label1">{{pokemon.version_group.name}}</label>    
+            <br/>
+            <label id="label1">{{pokemon.form_name}}</label>
+          </div>
+          <div class="col-xs-5" style="display: flex;justify-items: center;align-items: center; margin: auto;">
+            <a href="#" class="btn btn-primary">Fiche complete</a>
           </div>
         </div>
-      </li>
-    </ul>
-  </div>
-  
+      </div>
+    </li>
+  </ul>
+</div>
+
 </template>
 
 <script>
@@ -24,7 +34,9 @@ export default {
   data() {
     return {
       pokemons: [],
-      pokemon: {}
+      pokemon: {},
+      counter: 0,
+      startPoint: 0
     };
   },
   computed: {
@@ -40,7 +52,8 @@ export default {
   },
   methods: {
     getPokemon: function() {
-      for (var i = 1; i < 151; i++) {
+      for (var i = 1; i < 10; i++) {
+        this.counter++;
         axios
           .get("https://pokeapi.co/api/v2/pokemon-form/" + i + "/")
           .then(response => {
@@ -50,9 +63,33 @@ export default {
           })
           .catch(error => console.log(error));
       }
+    },
+    scroll(pokemons) {
+      this.startPoint = this.counter;
+      window.onscroll = () => {
+        let bottomOfWindow =
+          document.documentElement.scrollTop + window.innerHeight ===
+          document.documentElement.offsetHeight;
+        console.log(this.counter);
+        for (var i = 0; i < this.startPoint + 10; i++) {
+          if (bottomOfWindow) {
+            this.counter++;
+            axios
+              .get(
+                "https://pokeapi.co/api/v2/pokemon-form/" + this.counter + "/"
+              )
+              .then(response => {
+                pokemons.push(response.data);
+              });
+          }
+        }
+      };
     }
   },
   mounted() {
+    this.scroll(this.pokemons);
+  },
+  beforeMount() {
     this.getPokemon();
   }
 };

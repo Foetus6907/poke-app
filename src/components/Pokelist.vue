@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="list-group">
-      <li class="list-group-item" :key="pokemon.id" v-for="pokemon,key in list">
+      <li class="list-group-item" :key="key" v-for="(pokemon,key) in list">
         <div class="card" style="width: 100%;">
           
           <div class="card-body">

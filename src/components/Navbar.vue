@@ -27,4 +27,7 @@ export default {};
   width: 50%;
   height: 50%;
 }
+a {
+  color: black;
+}
 </style>

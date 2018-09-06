@@ -14,7 +14,7 @@
             <h5 class="card-title">{{ pokemon.name }}</h5>
             <label id="label1">{{pokemon.version_group.name}}</label>    
             <br/>
-            <label id="label1">{{pokemon.form_name}}</label>
+            <label id="label2">{{pokemon.form_name}}</label>
           </div>
           <div class="col-xs-5" style="display: flex;justify-items: center;align-items: center; margin: auto;">
             <a href="#" class="btn btn-primary">Fiche complete</a>
@@ -97,4 +97,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.btn-primary {
+  color: #1d2124;
+  background-color: #007bff8c;
+  border-color: #007bff8c;
+}
 </style>

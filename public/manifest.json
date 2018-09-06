@@ -2,102 +2,102 @@
     "name": "VueKedex",
     "short_name": "VueKedex",
     "icons": [{
-            "src": "/images/img/icons/android-chrome-192x192.png",
+            "src": "/Images/img/icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/images/img/icons/android-chrome-512x512.png",
+            "src": "/Images/img/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "/images/612d1397-09de-d986-f569-2909106dcc3c.webPlatform.png",
+            "src": "/Images/612d1397-09de-d986-f569-2909106dcc3c.webPlatform.png",
             "sizes": "44x44",
             "type": "image/png"
         },
         {
-            "src": "/images/82836b6a-2f80-7b95-86fc-8a024d5cca31.webPlatform.png",
+            "src": "/Images/82836b6a-2f80-7b95-86fc-8a024d5cca31.webPlatform.png",
             "sizes": "48x48",
             "type": "image/png"
         },
         {
-            "src": "/images/a9f6cb72-cce8-55ec-0d3a-18f6572d279f.webPlatform.png",
+            "src": "/Images/a9f6cb72-cce8-55ec-0d3a-18f6572d279f.webPlatform.png",
             "sizes": "1240x600",
             "type": "image/png"
         },
         {
-            "src": "/images/aa061763-965c-1e86-c64b-17fcc358a4b4.webPlatform.png",
+            "src": "/Images/aa061763-965c-1e86-c64b-17fcc358a4b4.webPlatform.png",
             "sizes": "300x300",
             "type": "image/png"
         },
         {
-            "src": "/images/ef808742-c868-fb29-fb68-b648a951ce4c.webPlatform.png",
+            "src": "/Images/ef808742-c868-fb29-fb68-b648a951ce4c.webPlatform.png",
             "sizes": "150x150",
             "type": "image/png"
         },
         {
-            "src": "/images/cfe5fbe2-a406-1468-7370-23653d1974ca.webPlatform.png",
+            "src": "/Images/cfe5fbe2-a406-1468-7370-23653d1974ca.webPlatform.png",
             "sizes": "88x88",
             "type": "image/png"
         },
         {
-            "src": "/images/329620d8-6274-d3ec-108e-6d47c47a3925.webPlatform.png",
+            "src": "/Images/329620d8-6274-d3ec-108e-6d47c47a3925.webPlatform.png",
             "sizes": "24x24",
             "type": "image/png"
         },
         {
-            "src": "/images/ded47728-ecbc-0be4-96e6-0563f300c1fd.webPlatform.png",
+            "src": "/Images/ded47728-ecbc-0be4-96e6-0563f300c1fd.webPlatform.png",
             "sizes": "50x50",
             "type": "image/png"
         },
         {
-            "src": "/images/cf189028-7999-fefd-d101-2872934fe6b4.webPlatform.png",
+            "src": "/Images/cf189028-7999-fefd-d101-2872934fe6b4.webPlatform.png",
             "sizes": "620x300",
             "type": "image/png"
         },
         {
-            "src": "/images/04559b9a-0e35-fbe7-06a6-1e6a3e5a0597.webPlatform.png",
+            "src": "/Images/04559b9a-0e35-fbe7-06a6-1e6a3e5a0597.webPlatform.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/images/5d1eaf08-82c1-5fd6-e50b-91684defb9fa.webPlatform.png",
+            "src": "/Images/5d1eaf08-82c1-5fd6-e50b-91684defb9fa.webPlatform.png",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "/images/50e45843-6fb2-add3-28d2-c171ca598bd7.webPlatform.png",
+            "src": "/Images/50e45843-6fb2-add3-28d2-c171ca598bd7.webPlatform.png",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "/images/871af6d5-3ff1-35a6-c50e-2dea50a5ff52.webPlatform.png",
+            "src": "/Images/871af6d5-3ff1-35a6-c50e-2dea50a5ff52.webPlatform.png",
             "sizes": "36x36",
             "type": "image/png"
         },
         {
-            "src": "/images/2817f329-3e7a-7e92-8526-e842eff61a64.webPlatform.png",
+            "src": "/Images/2817f329-3e7a-7e92-8526-e842eff61a64.webPlatform.png",
             "sizes": "1024x1024",
             "type": "image/png"
         },
         {
-            "src": "/images/052d2eb3-9fbb-19cb-0770-2db2b26eaeb5.webPlatform.png",
+            "src": "/Images/052d2eb3-9fbb-19cb-0770-2db2b26eaeb5.webPlatform.png",
             "sizes": "180x180",
             "type": "image/png"
         },
         {
-            "src": "/images/51618673-6a55-45f3-baff-e501082d2a01.webPlatform.png",
+            "src": "/Images/51618673-6a55-45f3-baff-e501082d2a01.webPlatform.png",
             "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "/images/eca4d160-2f61-b3ba-2c0f-0076d60234c7.webPlatform.png",
+            "src": "/Images/eca4d160-2f61-b3ba-2c0f-0076d60234c7.webPlatform.png",
             "sizes": "120x120",
             "type": "image/png"
         },
         {
-            "src": "/images/e7c8a50f-dbe4-c506-598b-ff18bf15cc76.webPlatform.png",
+            "src": "/Images/e7c8a50f-dbe4-c506-598b-ff18bf15cc76.webPlatform.png",
             "sizes": "76x76",
             "type": "image/png"
         }
@@ -106,6 +106,6 @@
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#4DBA87",
-    "lang": "",
+    "lang": "fr",
     "description": "Pokedex PWA app made with Firebase, VueJs and consuming data from Pokeapi API"
 }

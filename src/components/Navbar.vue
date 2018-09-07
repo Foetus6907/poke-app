@@ -10,9 +10,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Follow Me</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+            <a class="nav-item nav-link active" style="color:black;" href="#">Home</a>
+            <a class="nav-item nav-link" style="color:black;" href="#">Follow Me</a>
+            <a class="nav-item nav-link" style="color:black;" href="#">Contact</a>
             </div>
         </div>
     </nav>
@@ -27,7 +27,7 @@ export default {};
   width: 50%;
   height: 50%;
 }
-a {
+.nav-link {
   color: black;
 }
 </style>

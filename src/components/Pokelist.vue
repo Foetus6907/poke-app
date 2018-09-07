@@ -12,9 +12,9 @@
         <div class="card-body col-xs-8 row" style="display:  flex;justify-content:  center;align-items:  center;">
           <div class="col-xs-5 col-md-6 co-lg-6">
             <h5 class="card-title">{{ pokemon.name }}</h5>
-            <label id="label1">{{pokemon.version_group.name}}</label>    
+            <label :id="'versionGroup' + pokemon.id">{{pokemon.version_group.name}}</label>    
             <br/>
-            <label id="label2">{{pokemon.form_name}}</label>
+            <label :id="'fromName' + pokemon.id">{{pokemon.form_name}}</label>
           </div>
           <div class="col-xs-5" style="display: flex;justify-items: center;align-items: center; margin: auto;">
             <a href="#" class="btn btn-primary">Fiche complete</a>
@@ -98,6 +98,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .btn-primary {
+  color: #1d2124;
+  background-color: #007bff8c;
+  border: none;
+}
+
+.badge-primary {
   color: #1d2124;
   background-color: #007bff8c;
   border-color: #007bff8c;

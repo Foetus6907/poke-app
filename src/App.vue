@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    
     <navbar/>
-    <pokelist/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import Pokelist from "./components/Pokelist.vue";
 
 export default {
   name: "app",
   components: {
-    Navbar,
-    Pokelist
+    Navbar
   }
 };
 </script>

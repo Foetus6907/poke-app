@@ -27,47 +27,48 @@
 </template>
 
 <script>
-    export default {
-
-    }
+export default {};
 </script>
 
 <style scoped>
-div{
-    display:block;
-    text-align:center;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    padding:auto;
+div {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+}
+p {
+  margin-right: 10%;
+  margin-left: 10%;
 }
 a:link {
-    color: green; 
-    background-color: transparent; 
-    text-decoration: none;
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
 }
 a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
 }
 a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
 }
 a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
 }
-#githubImg{
-    width:25%;
-    height:25%;
+#githubImg {
+  width: 15%;
+  height: 15%;
 }
-#linkedinImg{
-    width:25%;
-    height:25%;
+#linkedinImg {
+  width: 15%;
+  height: 15%;
 }
-
 </style>

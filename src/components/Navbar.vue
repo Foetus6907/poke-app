@@ -10,9 +10,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link active" style="color:black;" href="#">Home</a>
-            <a class="nav-item nav-link" style="color:black;" href="#">Follow Me</a>
-            <a class="nav-item nav-link" style="color:black;" href="#">Contact</a>
+                <router-link class="nav-item nav-link" style="color:black;" to="/">Home</router-link>
+                <router-link class="nav-item nav-link" style="color:black;" to="/followme">Follow Me</router-link>
+                <router-link class="nav-item nav-link" style="color:black;" to="/contactme">Contact</router-link>
             </div>
         </div>
     </nav>
@@ -24,10 +24,8 @@ export default {};
 
 <style scoped>
 #logo {
-  width: 50%;
-  height: 50%;
+  width: 25%;
+  height: 25%;
 }
-.nav-link {
-  color: black;
-}
+
 </style>

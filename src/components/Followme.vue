@@ -1,0 +1,73 @@
+<template>
+<div id="app">
+    <div>
+        <img src="https://media.licdn.com/dms/image/C4E03AQGEUnRF3FcdQA/profile-displayphoto-shrink_200_200/0?e=1541635200&v=beta&t=nb2Ly-WIkNdFvRIV9CSwcv8LPIdZbPPSjEZiMSJBUO4">
+    </div>
+    <div>
+        <h1>I'm Mohamed Ghoubali, i build this app.</h1>
+    </div>
+    <div>
+        <p>
+        You can find the project repository of this app in my 
+        <a href="https://github.com/Foetus6907/poke-app">GitHub profil</a>. This PWA is made with Firebase Hosting, VueJs, Bootstrap4 and consume data provided by the <a href="http://pokeapi.co">PokeApi</a>.
+        You can follow me on LinkedIn and GitHub, where i regularly post about Firebase and VueJs.
+        </p>
+    </div>
+
+    <div>
+        <a href="https://www.linkedin.com/in/mohamed-ghoubali-9a698187/">
+            <img id="linkedinImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png">
+        </a>
+        <a href="https://github.com/Foetus6907">
+            <img id="githubImg" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png">
+        </a>
+    </div>
+</div>
+    
+</template>
+
+<script>
+    export default {
+
+    }
+</script>
+
+<style scoped>
+div{
+    display:block;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    padding:auto;
+}
+a:link {
+    color: green; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#githubImg{
+    width:25%;
+    height:25%;
+}
+#linkedinImg{
+    width:25%;
+    height:25%;
+}
+
+</style>

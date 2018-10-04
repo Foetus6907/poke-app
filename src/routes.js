@@ -1,11 +1,12 @@
 import Pokelist from './components/Pokelist.vue'
 import Followme from './components/Followme.vue'
 import ContactForm from './components/ContactForm.vue'
+import PokemonDetails from './components/PokemonDetails.vue'
 
 export const routes = [
     {
         path: '',
-        component:Pokelist
+        component: Pokelist
     },
     {
         path: '/followme',
@@ -14,5 +15,10 @@ export const routes = [
     {
         path: '/contactme',
         component: ContactForm
+    },
+    {
+        path: '/pokemon/:id',
+        component: PokemonDetails,
+        props: true
     }
 ];

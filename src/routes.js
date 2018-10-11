@@ -3,8 +3,7 @@ import Followme from './components/Followme.vue'
 import ContactForm from './components/ContactForm.vue'
 import PokemonDetails from './components/PokemonDetails.vue'
 
-export const routes = [
-    {
+export const routes = [{
         path: '',
         component: Pokelist
     },
@@ -17,8 +16,9 @@ export const routes = [
         component: ContactForm
     },
     {
-        path: '/pokemon/:id',
+        path: '/pokemon/:pokemonId',
         component: PokemonDetails,
+        name: 'pokemondetail',
         props: true
     }
 ];

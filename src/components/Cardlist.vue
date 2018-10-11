@@ -4,7 +4,7 @@
           <span class="badge badge-primary" style="width:25%;">{{ pokemon.id }}</span>
         </div>
         <div class="col-xs-2 col-md-3 co-lg-3" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
-        <img class="card-img-top" :src="pokemon.sprites.front_default" alt="Card image cap">
+          <img class="card-img-top" :src="pokemon.sprites.front_default" alt="Card image cap">
         </div>
         <div class="card-body col-xs-8 row" style="display:  flex;justify-content:  center;align-items:  center;">
           <div class="col-xs-5 col-md-6 co-lg-6">
@@ -14,7 +14,7 @@
             <label :id="'formName' + pokemon.id">{{pokemon.form_name}}</label>
           </div>
           <div class="col-xs-5" style="display: flex;justify-items: center;align-items: center; margin: auto;">
-            <a href="#" class="btn btn-primary">Fiche complete</a>
+            <router-link class="btn btn-primary" :to="{ name : 'pokemondetail', params:{ pokemonId : this.pokemon.id}}">Fiche complete</router-link>
           </div>
         </div>
     </div>

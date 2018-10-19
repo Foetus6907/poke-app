@@ -74,11 +74,11 @@ export default {
     }
   },
   mounted() {
+    this.getPokemon();
+
     this.scroll(this.pokemons);
   },
-  beforeMount() {
-    this.getPokemon();
-  }
+  beforeMount() {}
 };
 </script>
 

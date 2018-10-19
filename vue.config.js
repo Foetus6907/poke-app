@@ -5,12 +5,4 @@ module.exports = {
     name: 'Poke App'
   },
 
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
-  },
 }

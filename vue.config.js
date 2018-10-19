@@ -3,5 +3,14 @@ module.exports = {
 
   pwa: {
     name: 'Poke App'
-  }
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
 }

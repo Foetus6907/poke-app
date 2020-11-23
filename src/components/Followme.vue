@@ -1,8 +1,7 @@
 <template>
 <div id="app">
     <div>
-        <img src="https://media.licdn.com/dms/image/C4E03AQGEUnRF3FcdQA/profile-displayphoto-shrink_200_200/0?e=1541635200&v=beta&t=nb2Ly-WIkNdFvRIV9CSwcv8LPIdZbPPSjEZiMSJBUO4">
-    </div>
+      <img src="../../public/assets/photoprofile.jpg" height="500"/></div>
     <div>
         <h1>I'm Mohamed Ghoubali, i build this app.</h1>
     </div>
@@ -16,10 +15,10 @@
 
     <div>
         <a href="https://www.linkedin.com/in/mohamed-ghoubali-9a698187/">
-            <img id="linkedinImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png">
+          <img src="../../public/assets/linkedin.svg.png" width="500"/>
         </a>
         <a href="https://github.com/Foetus6907">
-            <img id="githubImg" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png">
+          <img src="../../public/assets/github.png" width="500"/>
         </a>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <template>
-<div>
-  <ul class="list-group">
+<div style="height: border-box">
+  <ul style="height: 95%" class="list-group">
     <li class="list-group-item container card" :key="key" v-for="(pokemon,key) in list">
         <card-list :pokemon="pokemon"></card-list>
     </li>
@@ -29,11 +29,12 @@ export default {
   computed: {
     list: {
       get: function() {
-        return this.pokemons.sort(function(a, b) {
+        return this.pokemons
+        /*.sort(function(a, b) {
           if (a.id < b.id) return -1;
           if (a.id > b.id) return 1;
           return 0;
-        });
+        });*/
       }
     }
   },

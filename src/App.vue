@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+
     <navbar/>
     <router-view></router-view>
-  </div>
+
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
   color: #2c3e50;
   margin-top: 0px;
 }
-#app{
+body{
   background-color: rgba(211, 211, 211, 0.25);
 }
 </style>

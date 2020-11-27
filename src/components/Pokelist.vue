@@ -1,9 +1,11 @@
 <template>
-  <ul style="height: 95%" class="list-group">
-    <li class="list-group-item container card" :key="key" v-for="(pokemon,key) in list">
+  <div class="container">
+    <ul class="list-group" mb-2>
+      <li class="list-group-item p-0" :key="key" v-for="(pokemon,key) in list">
         <card-list :pokemon="pokemon"></card-list>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -71,7 +73,7 @@ export default {
 
     //Scroll management
     const handleScroll = async () => {
-      if ((window.innerWidth + window.scrollY) >= document.body.offsetHeight) {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         console.log(hasFetchedAllData.value, !isLoading.value)
         if (hasFetchedAllData.value) {
           return

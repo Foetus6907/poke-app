@@ -1,24 +1,25 @@
-import Vue from 'vue'
-import App from './App.vue'
+
 import './registerServiceWorker'
-import VueRouter from 'vue-router'
 import { routes } from './routes'
 
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
-Vue.use(Vuetify)
 
-Vue.config.productionTip = false;
-Vue.use(VueRouter);
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router';
 
-const router = new VueRouter({
-  routes,
-  mode: 'history'
+import App from './App.vue'
+
+
+import * as mdb from 'mdb-ui-kit'; // lib
+
+const router = createRouter({
+  routes: routes,
+  history: createWebHistory(),
 })
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App)
+app.use(mdb)
+app.use(router)
+router.isReady().then(() => {
+  app.mount('#app')
+})

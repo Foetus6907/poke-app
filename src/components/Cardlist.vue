@@ -1,23 +1,23 @@
 <template>
-    <div class="row" style="display: flex ">
-        <div class="col-xs-2 col-md-2 co-lg-2" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
-          <span class="badge badge-primary" style="width:25%;">{{ pokemon.id }}</span>
+
+  <div class="card">
+    <div class="card-horizontal">
+      <div class="img-square-wrapper m-auto">
+        <img :src="pokemon.sprites.front_default" alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-center align-content-center">
+          <h5 class="card-title mb-1">{{ capitalizePokeName() }} </h5>
+          <h6 class="ml-2 mb-1"><span class="badge small rounded-pill bg-info">{{ pokemon.id }}</span></h6>
         </div>
-        <div class="col-xs-2 col-md-3 co-lg-3" style="float:left;display: flex;justify-content: center;align-items: center;justify-items: center;">
-          <img class="card-img-top" :src="pokemon.sprites.front_default" alt="Card image cap">
-        </div>
-        <div class="card-body col-xs-8 row" style="display:  flex;justify-content:  center;align-items:  center;">
-          <div class="col-xs-5 col-md-6 co-lg-6">
-            <h5 class="card-title">{{ capitalizePokeName() }}</h5>
-            <label :id="'versionGroup' + pokemon.id">{{pokemon.version_group.name}}</label>    
-            <br/>
-            <label :id="'formName' + pokemon.id">{{pokemon.form_name}}</label>
-          </div>
-          <div class="col-xs-5" style="display: flex;justify-items: center;align-items: center; margin: auto;">
-            <router-link class="btn btn-primary" :to="{ name : 'pokemondetail', params:{ pokemonId : this.pokemon.id}}">Fiche complete</router-link>
-          </div>
-        </div>
+        <p class="card-text mb-1">{{pokemon.version_group.name}} {{pokemon.form_name}}</p>
+        <router-link tag="button" class="btn btn-primary btn-sm" :to="{ name : 'pokemondetail', params:{ pokemonId : this.pokemon.id}}">Fiche complete</router-link>
+      </div>
+      <div class="img-square-wrapper m-auto">
+        <img :src="pokemon.sprites.back_default" alt="Card image cap">
+      </div>
     </div>
+  </div>
 </template>
 
 
@@ -35,15 +35,8 @@ export default {
 </script>
 
 <style scoped>
-.btn-primary {
-  color: #1d2124;
-  background-color: #007bff8c;
-  border: none;
-}
-
-.badge-primary {
-  color: #1d2124;
-  background-color: #007bff8c;
-  border-color: #007bff8c;
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
 }
 </style>

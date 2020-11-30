@@ -16,7 +16,6 @@ npm run build
 ```
 
 ### App running in live @
-```
 [Firebase root address](https://pokedex-d0c74.firebaseapp.com/)
 [https://www.mgpokedex.com](https://www.mgpokedex.com)
-```
+

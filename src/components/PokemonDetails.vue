@@ -3,7 +3,7 @@
     <div class="card mb-2">
       <div class="card-body">
         <!-- Carousel wrapper -->
-        <div id="carouselBasicExample" class="w-50 bg-light carousel slide carousel-fade carousel-dark m-auto"
+        <div id="carouselBasicExample" class="w-50 bg-light carousel slide carousel-fade carousel-dark w-100"
              data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">

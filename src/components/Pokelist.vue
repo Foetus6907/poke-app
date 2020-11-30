@@ -28,42 +28,33 @@ export default {
       });
     });
 
-    async function fetchPokemon(pokemonId) {
-      try {
-        const pokemon = await axios.get("https://pokeapi.co/api/v2/pokemon-form/" + pokemonId + "/")
-        return pokemon.data
-      } catch (e) {
-        console.log('Error fetching pokemon', e);
+    function getPokemonById(pokemonId) {
+      axios.get(`https://pokeapi.co/api/v2/pokemon-form/${pokemonId}`)
+        .then((response) => {
+          pokemons.value = [
+            ...pokemons.value,
+            response.data
+          ]
+        })
+        .catch((error) => console.log('Error fetching pokemon', error));
+    }
+
+    function getPokemons (startIndex, limit) {
+      isLoading.value = true
+      for (let i = startIndex; i < startIndex + limit; i++) {
+        getPokemonById(i);
+        counter.value = i;
       }
+      isLoading.value = false
     }
 
     const counter = ref(1)
-    // const totalPages = ref()
     const limit = 10
     const maxPokemon = 898
     const isLoading = ref(true)
 
-    async function getFirstPokemons(startIndex, limit) {
-      isLoading.value = true
-      const fetchPoks = []
-      for (let i = startIndex; i < startIndex + limit; i++) {
-        try {
-          const fetchPok = await fetchPokemon(i)
-          counter.value = i;
-          fetchPoks.push(fetchPok)
-        } catch (e) {
-          console.log('Error fetching pokemons', e);
-        }
-      }
-      isLoading.value = false
-      pokemons.value = [
-        ...pokemons.value,
-        ...fetchPoks
-      ]
-    }
-
     onBeforeMount(async () => {
-      getFirstPokemons(counter.value, limit)
+      getPokemons(counter.value, limit)
       isLoading.value = false
     })
 
@@ -72,7 +63,7 @@ export default {
     })
 
     //Scroll management
-    const handleScroll = async () => {
+    const handleScroll = () => {
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         console.log(hasFetchedAllData.value, !isLoading.value)
         if (hasFetchedAllData.value) {
@@ -80,7 +71,7 @@ export default {
         }
 
         if (!isLoading.value) {
-          await getFirstPokemons(counter.value + 1, limit)
+          getPokemons(counter.value + 1, limit)
         }
       }
     }

@@ -1,5 +1,5 @@
 
-import './registerServiceWorker'
+// import './registerServiceWorker'
 import { routes } from './routes'
 
 

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ul class="list-group" mb-2>
+    <ul class="list-group">
       <li class="list-group-item p-0" :key="key" v-for="(pokemon,key) in list">
         <card-list :pokemon="pokemon"></card-list>
       </li>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { ref, computed, onBeforeMount, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onActivated, onMounted, onUnmounted } from 'vue';
 import Cardlist from "./Cardlist.vue";
 
 const axios = require("axios");
@@ -53,9 +53,10 @@ export default {
     const maxPokemon = 898
     const isLoading = ref(true)
 
-    onBeforeMount(async () => {
+    getPokemons(counter.value, limit)
+
+    onActivated(async () => {
       getPokemons(counter.value, limit)
-      isLoading.value = false
     })
 
     const hasFetchedAllData = computed(() => {

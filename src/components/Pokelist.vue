@@ -1,16 +1,30 @@
 <template>
   <div class="container">
-    <ul class="list-group">
-      <li class="list-group-item p-0" :key="key" v-for="(pokemon,key) in list">
-        <card-list :pokemon="pokemon"></card-list>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="col-6">
+        <ul class="list-group">
+          <li class="list-group-item p-0" :key="key" v-for="(pokemon,key) in list">
+            <card-list :pokemon="pokemon"></card-list>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <ul class="list-group">
+          <li class="list-group-item p-0" :key="key" v-for="(pokemon,key) in orderedPokemonList">
+            <card-list :pokemon="pokemon"></card-list>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
 import { ref, computed, onActivated, onMounted, onUnmounted } from 'vue';
 import Cardlist from "./Cardlist.vue";
+import { useStore } from 'vuex'
+import {GET_POKEMON_BY_ID} from "@/store/pokemon/types";
 
 const axios = require("axios");
 export default {
@@ -19,6 +33,8 @@ export default {
     "card-list": Cardlist
   },
   setup() {
+    const store = useStore()
+
     const pokemons = ref([]);
     const orderedPokemons = computed(() => {
       return pokemons.value.sort(function(a, b) {
@@ -53,6 +69,10 @@ export default {
     const maxPokemon = 898
     const isLoading = ref(true)
 
+    for (let i = 1; i < 10; i++) {
+      store.dispatch(GET_POKEMON_BY_ID, {pokemonId: i})
+    }
+
     getPokemons(counter.value, limit)
 
     onActivated(async () => {
@@ -66,7 +86,6 @@ export default {
     //Scroll management
     const handleScroll = () => {
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        console.log(hasFetchedAllData.value, !isLoading.value)
         if (hasFetchedAllData.value) {
           return
         }
@@ -85,8 +104,14 @@ export default {
       window.removeEventListener('scroll', handleScroll)
     })
 
+
+    console.log(store.getters.orderedPokemonList)
+
     return {
-      list: orderedPokemons
+      list: orderedPokemons,
+      // access a state in computed function
+      orderedPokemonList: store.getters.orderedPokemonList,
+
     }
   }
 }

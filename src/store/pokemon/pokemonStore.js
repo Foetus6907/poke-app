@@ -2,10 +2,15 @@
 import mutations from "@/store/pokemon/mutations";
 import actions from "@/store/pokemon/actions";
 
+const RANGE_SIZE = 9;
+const MAX_POKEMON = 898
+
 const pokemonStore = {
     state() {
         return {
-            count: 5,
+            startIndex: 1,
+            rangeSize: RANGE_SIZE,
+            loadingStatus: false,
             currentPokemon: {},
             pokemonList: []
         }
@@ -20,8 +25,11 @@ const pokemonStore = {
                 return 0;
             });
         },
-        getPokemonByID: (state) => (id) => {
+        findPokemonByID: (state) => (id) => {
             return state.pokemonList.find(pokemon => pokemon.id === id)
+        },
+        hasFetchedAllPokemon: (state) => {
+            return state.startIndex === MAX_POKEMON
         }
     }
 }
